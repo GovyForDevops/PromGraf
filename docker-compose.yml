@@ -7,7 +7,7 @@ services:
     ports:
       - "3100:3100"  # Loki listens on this port
     volumes:
-      - home/devops/grafana/Govy_promGraf/PromGraf/loki-config.yaml:/etc/loki/local-config.yaml  # Mount Loki's config file
+      - /home/devops/grafana/Govy_promGraf/PromGraf/loki-config.yaml:/etc/loki/local-config.yaml  # Mount Loki's config file
     command: -config.file=/etc/loki/local-config.yaml
 
   promtail:
